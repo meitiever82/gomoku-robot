@@ -1,0 +1,27 @@
+[project]
+name = "gomoku-robot"
+version = "0.1.0"
+description = "五子棋机器人 - LeRobot + SO-100 机械臂"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.0.0",
+    "opencv-contrib-python>=4.9.0",
+    "torch>=2.2.1",
+]
+
+[project.optional-dependencies]
+robot = [
+    "lerobot>=0.5.0",
+]
+
+[project.scripts]
+gomoku-play = "gomoku_robot.main:main"
+gomoku-calibrate-board = "gomoku_robot.calibration.calibrate_board:main"
+gomoku-calibrate-robot = "gomoku_robot.calibration.calibrate_robot:main"
+
+[tool.pytest.ini_options]
+testpaths = ["gomoku_robot/tests"]
+
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
