@@ -1,0 +1,6 @@
+numpy>=2.0.0
+opencv-contrib-python>=4.9.0
+torch>=2.2.1
+
+[robot]
+lerobot>=0.5.0

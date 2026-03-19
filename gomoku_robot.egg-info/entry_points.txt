@@ -1,0 +1,4 @@
+[console_scripts]
+gomoku-calibrate-board = gomoku_robot.calibration.calibrate_board:main
+gomoku-calibrate-robot = gomoku_robot.calibration.calibrate_robot:main
+gomoku-play = gomoku_robot.main:main

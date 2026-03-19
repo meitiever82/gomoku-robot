@@ -2,9 +2,9 @@
 name = "gomoku-robot"
 version = "0.1.0"
 description = "五子棋机器人 - LeRobot + SO-100 机械臂"
-requires-python = ">=3.12"
+requires-python = ">=3.11"
 dependencies = [
-    "numpy>=2.0.0",
+    "numpy>=1.26.0",
     "opencv-contrib-python>=4.9.0",
     "torch>=2.2.1",
 ]
@@ -24,4 +24,4 @@ testpaths = ["gomoku_robot/tests"]
 
 [build-system]
 requires = ["setuptools>=75.0"]
-build-backend = "setuptools.backends._legacy:_Backend"
+build-backend = "setuptools.build_meta"

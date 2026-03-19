@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: gomoku-robot
+Version: 0.1.0
+Summary: 五子棋机器人 - LeRobot + SO-100 机械臂
+Requires-Python: >=3.11
+Requires-Dist: numpy>=2.0.0
+Requires-Dist: opencv-contrib-python>=4.9.0
+Requires-Dist: torch>=2.2.1
+Provides-Extra: robot
+Requires-Dist: lerobot>=0.5.0; extra == "robot"
