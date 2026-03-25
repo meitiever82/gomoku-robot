@@ -65,9 +65,16 @@ uv pip install --python "$PY" --no-build-isolation flatdict==4.0.1
 echo ""
 
 # ---- 安装 LeIsaac ----
-echo "[7/10] 安装 LeIsaac + IsaacLab (需要下载 git 仓库，可能较慢)..."
+LEISAAC_DIR="$PROJECT_DIR/../leisaac/source/leisaac"
+if [ ! -d "$LEISAAC_DIR" ]; then
+    echo "错误: 未找到 $LEISAAC_DIR"
+    echo "请先 clone leisaac 仓库:"
+    echo "  git clone https://github.com/LightwheelAI/leisaac.git $PROJECT_DIR/../leisaac"
+    exit 1
+fi
+echo "[7/10] 安装 LeIsaac + IsaacLab (本地)..."
 uv pip install --python "$PY" \
-    'leisaac[isaaclab] @ git+https://github.com/LightwheelAI/leisaac.git#subdirectory=source/leisaac' \
+    -e "$LEISAAC_DIR[isaaclab]" \
     --extra-index-url https://pypi.nvidia.com
 echo ""
 
